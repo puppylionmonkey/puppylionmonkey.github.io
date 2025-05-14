@@ -1,6 +1,6 @@
 {
-    "name": "Science Acceleration",
-    "short_name": "science_acceleration",
+    "name": "flet_test",
+    "short_name": "flet_test",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#FFFFFF",

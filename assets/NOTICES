@@ -1717,6 +1717,7 @@ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 --------------------------------------------------------------------------------
 ansicolor
+google_mobile_ads
 
 
                                  Apache License
@@ -5165,7 +5166,9 @@ url_launcher_windows
 vector_graphics
 vector_graphics_codec
 vector_graphics_compiler
+webview_flutter
 webview_flutter_platform_interface
+webview_flutter_wkwebview
 xdg_directories
 
 Copyright 2013 The Flutter Authors. All rights reserved.
@@ -8098,6 +8101,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 --------------------------------------------------------------------------------
 flet
+flet_ads
 
                                  Apache License
                            Version 2.0, January 2004

@@ -1,6 +1,6 @@
 {
-    "name": "flet_test",
-    "short_name": "flet_test",
+    "name": "科學加速",
+    "short_name": "scienceacceleration",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#FFFFFF",

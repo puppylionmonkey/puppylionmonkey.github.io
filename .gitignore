@@ -1,11 +1,2 @@
 .idea
 venv
-build*
-*.jks
-*.properties
-aab
-apk
-site-packages
-app.zip
-.vercel
-flet

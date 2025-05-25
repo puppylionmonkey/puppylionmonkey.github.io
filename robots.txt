@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://puppylionmonkey.github.io/sitemap.xml

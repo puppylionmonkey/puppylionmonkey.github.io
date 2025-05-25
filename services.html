@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>服務項目 - 政安科學軟體測試有限公司</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+<!-- Navbar 區塊 -->
+<div id="navbar-placeholder"></div>
+
+<!-- Page Header -->
+<section class="bg-gray-800 py-16 text-center">
+    <h2 class="text-3xl font-bold mb-4">服務項目</h2>
+    <p class="text-gray-300">我們專注於開發與測試，以 Python 為核心技術打造高品質應用解決方案。</p>
+</section>
+
+<!-- 開發服務 -->
+<section class="py-16 bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4">
+        <h3 class="text-2xl font-semibold mb-8 border-b border-gray-700 pb-2">應用程式開發服務</h3>
+        <div class="grid md:grid-cols-2 gap-6 text-gray-300">
+            <div>🌐 網頁系統開發（Web）</div>
+            <div>📱 Android App 開發</div>
+            <div>📱 iOS App 開發</div>
+            <div>🖥️ Windows 桌面應用</div>
+            <div>🧑‍💻 macOS 桌面應用</div>
+            <div>🧩 Chrome 擴充功能（Extension）</div>
+        </div>
+    </div>
+</section>
+
+<!-- 自動化測試服務 -->
+<section class="py-16 bg-gray-800">
+    <div class="max-w-6xl mx-auto px-4">
+        <h3 class="text-2xl font-semibold mb-8 border-b border-gray-600 pb-2">自動化測試服務</h3>
+        <div class="grid md:grid-cols-2 gap-6 text-gray-300">
+            <div>✅ Web 自動化測試</div>
+            <div>✅ Android App 自動化測試</div>
+            <div>✅ iOS App 自動化測試</div>
+        </div>
+    </div>
+</section>
+
+<!-- 科學軟體服務 -->
+<section class="py-16 bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4">
+        <h3 class="text-2xl font-semibold mb-8 border-b border-gray-700 pb-2">科學軟體服務</h3>
+        <div class="text-gray-300 text-lg leading-relaxed">
+            我們提供科學導向的軟體服務，協助個人開發者、中小企業或教育單位進行系統升級、流程數位化與工具現代化，
+            包含既有軟體優化、資料處理自動化、科學模擬介面整合等，讓您的工作更高效、資訊更即時。
+        </div>
+    </div>
+</section>
+
+<!-- Footer 區塊 -->
+<div id="footer-placeholder"></div>
+
+<!-- 動態載入 navbar.html 和 footer.html -->
+<script type="module">
+    const navbarHTML = await (await fetch("navbar.html")).text();
+    const footerHTML = await (await fetch("footer.html")).text();
+    document.getElementById("navbar-placeholder").innerHTML = navbarHTML;
+    document.getElementById("footer-placeholder").innerHTML = footerHTML;
+</script>
+
+</body>
+</html>

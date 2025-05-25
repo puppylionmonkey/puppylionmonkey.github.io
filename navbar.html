@@ -1,36 +1,28 @@
 <!-- navbar.html -->
 <header class="bg-gray-800 shadow sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
 
-    <!-- 左側 Logo + 公司名 -->
-    <a href="index.html" class="flex items-center gap-3">
-      <img src="logo.png" alt="公司 Logo" class="h-8 w-8" />
-      <h1 class="text-xl font-bold text-white">政安科學軟體測試有限公司</h1>
-    </a>
+        <!-- 左側 Logo + 公司名 -->
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="logo.png" alt="公司 Logo" class="h-8 w-8"/>
+            <h1 class="text-xl font-bold text-white">政安科學軟體測試有限公司</h1>
+        </a>
 
-    <!-- 手機選單按鈕 -->
-    <button id="menu-toggle" class="text-gray-300 md:hidden focus:outline-none">
-      <!-- 三條線圖示 -->
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
+        <!-- 手機選單按鈕 -->
+        <button id="menu-toggle" class="text-gray-300 md:hidden focus:outline-none">
+            <!-- 三條線圖示 -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                 viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
 
-    <!-- 導覽列 (預設桌面顯示、手機隱藏) -->
-    <nav id="menu" class="hidden md:flex flex-col md:flex-row gap-2 md:gap-6 text-center md:text-left mt-4 md:mt-0">
-      <a href="services.html" class="hover:text-blue-400 text-gray-200 block">服務項目</a>
-      <a href="portfolio.html" class="hover:text-blue-400 text-gray-200 block">作品展示</a>
-      <a href="course.html" class="hover:text-blue-400 text-gray-200 block">測試課程</a>
-    </nav>
-  </div>
+        <!-- 導覽列 (預設桌面顯示、手機隱藏) -->
+        <nav id="menu" class="hidden md:flex flex-col md:flex-row gap-2 md:gap-6 text-center md:text-left mt-4 md:mt-0">
+            <a href="services.html" class="hover:text-blue-400 text-gray-200 block">服務項目</a>
+            <a href="portfolio.html" class="hover:text-blue-400 text-gray-200 block">作品展示</a>
+            <a href="course.html" class="hover:text-blue-400 text-gray-200 block">測試課程</a>
+        </nav>
+    </div>
 </header>
 
-<!-- 開關選單腳本 -->
-<script>
-  const toggle = document.getElementById("menu-toggle");
-  const menu = document.getElementById("menu");
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
-</script>

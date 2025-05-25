@@ -59,12 +59,7 @@
 <div id="footer-placeholder"></div>
 
 <!-- 動態載入 navbar.html 和 footer.html -->
-<script type="module">
-    const navbarHTML = await (await fetch("navbar.html")).text();
-    const footerHTML = await (await fetch("footer.html")).text();
-    document.getElementById("navbar-placeholder").innerHTML = navbarHTML;
-    document.getElementById("footer-placeholder").innerHTML = footerHTML;
-</script>
+<script type="module" src="navbar-loader.js"></script>
 
 </body>
 </html>

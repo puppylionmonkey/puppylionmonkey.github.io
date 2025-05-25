@@ -1,113 +1,65 @@
-<!DOCTYPE html><html><head>
-  <base href="/">
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="科學加速">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-
-  <!-- Flet specific -->
-  <meta name="flet-route-url-strategy" content="path">
-  <meta name="flet-web-pyodide" content="true">
-
-  <title>科學加速</title>
-  <link rel="manifest" href="manifest.json">
-
-  <script>
-    var webRenderer = "canvaskit";
-    var useColorEmoji = "false" == "true";
-    var pythonModuleName = "main";
-  </script>
-
-  <script src="python.js"></script>
-  <style id="splash-screen-style">
-    html {
-      height: 100%
-    }
-
-    body {
-      margin: 0;
-      min-height: 100%;
-      background-color: #ffffff;
-          background-size: 100% 100%;
-    }
-
-    .center {
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-    }
-
-    .contain {
-      display:block;
-      width:100%; height:100%;
-      object-fit: contain;
-    }
-
-    .stretch {
-      display:block;
-      width:100%; height:100%;
-    }
-
-    .cover {
-      display:block;
-      width:100%; height:100%;
-      object-fit: cover;
-    }
-
-    .bottom {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      -ms-transform: translate(-50%, 0);
-      transform: translate(-50%, 0);
-    }
-
-    .bottomLeft {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
-
-    .bottomRight {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      body {
-        background-color: #222222;
-          }
-    }
-  </style>
-  <script id="splash-screen-script">
-    function removeSplashFromWeb() {
-      document.getElementById("splash")?.remove();
-      document.getElementById("splash-branding")?.remove();
-      document.body.style.background = "transparent";
-    }
-  </script>
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>政安科學軟體測試有限公司</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-gray-900 text-white">
+  <!-- Navbar -->
+  <header class="bg-gray-800 shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">政安科學軟體測試有限公司</h1>
+      <nav class="space-x-6">
+        <a href="services.html" class="hover:text-blue-400">服務項目</a>
+        <a href="portfolio.html" class="hover:text-blue-400">作品展示</a>
+        <a href="course.html" class="hover:text-blue-400">測試課程</a>
+        <a href="contact.html" class="hover:text-blue-400">聯絡我們</a>
+      </nav>
+    </div>
+  </header>
 
-<body>
-  <picture id="splash">
-      <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x" media="(prefers-color-scheme: light)">
-      <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x" media="(prefers-color-scheme: dark)">
-      <img class="center" aria-hidden="true" src="splash/img/light-1x.png" alt="">
-  </picture>
-  <script src="flutter_bootstrap.js" async=""></script>
+  <!-- Hero -->
+  <section class="bg-gray-800 py-20">
+    <div class="max-w-5xl mx-auto text-center px-4">
+      <h2 class="text-3xl md:text-5xl font-bold mb-4">推動軟體測試自動化與科學發展</h2>
+      <p class="text-lg text-gray-300 mb-6">提供專業網頁、App、桌面應用開發與自動化測試解決方案</p>
+      <a href="services.html" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">了解更多服務</a>
+    </div>
+  </section>
 
+  <!-- Services -->
+  <section class="py-16 bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-2xl font-bold text-center mb-10">我們的服務</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-800 p-6 rounded-lg shadow">
+          <h4 class="text-xl font-semibold mb-2">網頁與 App 開發</h4>
+          <p class="text-gray-300">響應式設計、跨平台支援，適用各種裝置與業務需求。</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow">
+          <h4 class="text-xl font-semibold mb-2">Windows / iOS 應用</h4>
+          <p class="text-gray-300">桌面工具、企業內部應用、iOS 客製開發一次搞定。</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow">
+          <h4 class="text-xl font-semibold mb-2">自動化測試服務</h4>
+          <p class="text-gray-300">協助建立穩定的測試流程，減少人力與錯誤率。</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</body></html>
+  <!-- CTA -->
+  <section class="bg-gray-800 py-16 text-center">
+    <h4 class="text-2xl font-bold mb-4">想了解自動化測試課程？</h4>
+    <p class="mb-6 text-gray-300">我們提供線上教學影片，讓您輕鬆入門自動化技術</p>
+    <a href="course.html" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">立即觀看課程</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+    <p>&copy; 2025 政安科學軟體測試有限公司. All rights reserved.</p>
+  </footer>
+</body>
+</html>

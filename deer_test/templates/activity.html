@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body {
+            position: absolute;
+            width: 100%;
+            left: -0.8%;
+            top: -0.5%;
+        }
+
+        @media screen and (max-width: 430px) {
+            body {
+                width: 100%;
+                /*left: -0.6%;*/
+            }
+        }
+    </style>
+    <style>
+        #section1 {
+            position: relative;
+            /*overflow: hidden;*/
+        }
+
+        @media screen and (min-width: 430px) {
+            #section1 {
+                margin: 0px 95px;
+            }
+        }
+
+        .pink-block {
+            background-color: #C84E85;
+            width: 100%;
+            height: 1.5vw; /* 可根據需要調整高度 */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .image-row {
+            padding-top: 20px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between; /* 確保圖片之間沒有左右間距 */
+        }
+
+        .logo1 {
+            width: 32.3452484743%;
+            height: auto;
+        }
+
+        .deer1 {
+            cursor: pointer;
+            width: 25.5947191431%;
+            height: auto;
+        }
+
+        .deer2 {
+            cursor: pointer;
+            width: 20.6999626354%;
+            height: auto;
+        }
+
+        .deer3 {
+            cursor: pointer;
+            width: 21.3600697472%;
+            height: auto;
+        }
+
+        #section1 img {
+            cursor: pointer;
+            z-index: 10;
+        }
+    </style>
+
+    <style>
+        #background8 {
+            width: 100%;
+            height: auto; /* Keep the aspect ratio */
+            z-index: 1;
+            /*display: block; !* Ensure it doesn't have extra spacing below *!*/
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+        }
+
+        #background17 {
+            width: 100%;
+            height: auto; /* Keep the aspect ratio */
+            z-index: 1;
+            display: block; /* Ensure it doesn't have extra spacing below */
+        }
+
+        /*@media screen and (min-width: 430px) {*/
+        /*    #background8 {*/
+        /*        margin: 0px 95px;*/
+        /*    }*/
+        /*}*/
+    </style>
+</head>
+<body>
+<!--    <div class="section vertical-scrolling fp-auto-height" id="section1">-->
+<!--        <div class="section-header">-->
+<div class="pink-block"></div>
+<div class="image-row">
+    <img id="logo1" class="logo1" src="../static/image/page1/logo1.png" alt="Image 1">
+    <img id="deer1" class="deer1" src="../static/image/page1/deer1.png" alt="Image 2">
+    <img id="deer2" class="deer2" src="../static/image/page1/deer2.png" alt="Image 3">
+    <img id="deer3" class="deer3" src="../static/image/page1/deer3.png" alt="Image 4">
+</div>
+<!--        </div>-->
+<!--    </div>-->
+<img id='background8' src="../static/image/activity.png" alt="活動詳情">
+<div class="section vertical-scrolling fp-auto-height" id="section6">
+    <img id='background17' src="../static/image/page4/background8.png" alt="活動詳情">
+</div>
+
+<script>
+    document.getElementById("deer1").addEventListener("click", function () {
+        // 導航到另一頁，並指定滾動目標
+        window.location.href = "index.html#section2";
+    });
+    document.getElementById("deer3").addEventListener("click", function () {
+        // 導航到另一頁，並指定滾動目標
+        window.location.href = "index.html#section4";
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>視障按摩推廣資訊網</title>
+    <link rel="stylesheet" href="../static/css/fullpage.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <!--    section1 style-->
+    <script type="application/ld+json">
+        {
+            "@context": "https://jobmassage.org.tw/",
+            "@type": "WebSite",
+            "name": "視障按摩推廣資訊網",
+            "url": "https://jobmassage.org.tw/"
+        }
+    </script>
+    <style>
+        body {
+            position: absolute;
+            width: 100%;
+            left: 0;
+        }
+
+        @media screen and (max-width: 430px) {
+            body {
+                width: 100%;
+                left: 0;
+            }
+        }
+    </style>
+    <style>
+        #section1 {
+            position: relative;
+            overflow: hidden;
+            padding-top: 0;
+        }
+
+        @media screen and (min-width: 430px) {
+            #section1 {
+                margin: 0px 15%;
+            }
+        }
+
+        .pink-block {
+            background-color: #C84E85;
+            width: 100%;
+            height: 1.5vw; /* 可根據需要調整高度 */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .image-row {
+            padding-top: 20px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between; /* 確保圖片之間沒有左右間距 */
+        }
+
+        .logo1 {
+            width: 32.3452484743%;
+            height: auto;
+        }
+
+        .deer1 {
+            width: 25.5947191431%;
+            height: auto;
+        }
+
+        .deer2 {
+            /*top: 80%;*/
+            width: 20.6999626354%;
+            height: auto;
+            z-index: 1;
+        }
+
+        .deer3 {
+            width: 21.3600697472%;
+            height: auto;
+        }
+
+        .content1, .content2 {
+            width: 100%;
+        }
+
+        #section1 img {
+            z-index: 10;
+        }
+
+        #content2 {
+            cursor: pointer;
+        }
+    </style>
+    <!--    section2 style-->
+    <style>
+        #section2 {
+        }
+
+        @media screen and (min-width: 430px) {
+            #section2 {
+                margin: 0px 15%;
+            }
+        }
+
+        #background2 {
+            width: 100%;
+            height: auto; /* Keep the aspect ratio */
+            z-index: 1;
+            display: block; /* Ensure it doesn't have extra spacing below */
+        }
+
+        #section2 .red-dot {
+            z-index: 2;
+            width: 8%;
+        }
+
+        .red-dot {
+            position: absolute;
+        }
+
+        #red1 {
+            top: 33%;
+            left: 62%;
+        }
+
+        #red2 {
+            top: 50%;
+            left: 65%;
+        }
+
+        #red3 {
+            top: 23%;
+            left: 83%;
+        }
+
+        #red4 {
+            top: 60%;
+            left: 83%;
+        }
+
+        #red5 {
+            top: 75%;
+            left: 75%;
+        }
+
+        .hover-image {
+            display: none;
+            position: absolute;
+            top: 15%; /* Adjust position as needed */
+            left: -5%; /* Adjust position as needed */
+            width: 70%; /* Adjust size as needed */
+            height: auto; /* Adjust size as needed */
+            z-index: 10; /* Ensure it appears on top */
+        }
+
+        .red-dot-container:hover .hover-image {
+            display: block;
+        }
+
+        .red-dot-container:hover .red-dot {
+            transform: scale(1.5); /* Adjust the scale factor as needed */
+        }
+    </style>
+    <!--    section3 style-->
+    <style>
+        /* 電腦版：合併 section3 和 section4 */
+        @media screen and (min-width: 430px) {
+            #section3 {
+                margin: 0px 15%;
+                display: flex;
+                flex-direction: row; /* 水平並排 */
+                /*align-items: center; !* 置中對齊 *!*/
+                justify-content: center; /* 水平置中 */
+            }
+
+            .section3-content,
+            .section4-content {
+                flex: 1; /* 平分寬度 */
+                text-align: center;
+            }
+        }
+
+        #background5 {
+            width: 100%;
+            height: auto; /* Keep the aspect ratio */
+            z-index: 1;
+            display: block; /* Ensure it doesn't have extra spacing below */
+        }
+
+        #background4 {
+            width: 100%;
+            height: auto; /* Keep the aspect ratio */
+            z-index: 1;
+            display: block; /* Ensure it doesn't have extra spacing below */
+        }
+
+        @media screen and (max-width: 430px) {
+            #background4 {
+                content: url("../static/image/page4/background4.png");
+            }
+        }
+    </style>
+    <!--    section4 style-->
+    <style>
+        #section4 {
+            position: relative;
+        }
+
+        @media screen and (min-width: 430px) {
+            #section4 {
+                margin: 0px 15%;
+            }
+        }
+
+        #background6 {
+            width: 100%;
+            height: auto; /* Keep the aspect ratio */
+            z-index: 1;
+            display: block; /* Ensure it doesn't have extra spacing below */
+        }
+    </style>
+    <style>
+        #section5 {
+            position: relative;
+        }
+
+        @media screen and (min-width: 430px) {
+            #section5 {
+                margin: 0px 15%;
+            }
+        }
+
+        #background7 {
+            width: 100%;
+            height: auto; /* Keep the aspect ratio */
+            z-index: 1;
+            display: block; /* Ensure it doesn't have extra spacing below */
+        }
+    </style>
+    <style>
+        #section6 {
+            position: relative;
+        }
+
+        @media screen and (min-width: 430px) {
+            #section6 {
+                margin: 0px 15%;
+            }
+        }
+
+        #background8 {
+            width: 100%;
+            height: auto; /* Keep the aspect ratio */
+            z-index: 1;
+            display: block; /* Ensure it doesn't have extra spacing below */
+        }
+    </style>
+    <style>
+        #background15 {
+            width: 100%;
+            height: auto; /* Keep the aspect ratio */
+            z-index: 1;
+            display: block; /* Ensure it doesn't have extra spacing below */
+        }
+
+        iframe {
+            position: absolute;
+            top: 18%;
+            left: 30%;
+            z-index: 2; /* 設定 iframe 層級較高 */
+            width: 60%;
+            height: 60%;
+        }
+    </style>
+    <style>
+        .swiper-container {
+            width: 100%;
+            /*height: 400px; !* 根據需求調整高度 *!*/
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="fullpage">
+    <div class="section vertical-scrolling fp-auto-height" id="section1">
+        <div class="section-header">
+            <div class="pink-block"></div>
+            <div class="image-row">
+                <img id="logo1" class="logo1" src="../static/image/page1/logo1.png" alt="Image 1">
+                <img id="deer1" class="deer1" src="../static/image/page1/deer1.png" alt="Image 2">
+                <img id="deer2" class="deer2" src="../static/image/page1/deer2.png" alt="Image 3">
+                <img id="deer3" class="deer3" src="../static/image/page1/deer3.png" alt="Image 4">
+            </div>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img id="content1" class="content1" src="../static/image/page1/content1.png" alt="content1">
+                </div>
+                <div class="swiper-slide">
+                    <img id="content2" class="content2" src="../static/image/page1/content1.gif" alt="content2">
+                </div>
+            </div>
+            <!--         如果需要導航按鈕 -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- 如果需要分頁器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="section vertical-scrolling fp-auto-height" id="section2">
+        <img id='background2' src="../static/image/page2/background2_1.png" alt="">
+        <div class="red-dot-container">
+            <img id="red1" class="red-dot" src="../static/image/page2/red-dot.png" alt="Red Dot">
+            <img class="hover-image" src="../static/image/page2/hover_image1.png" alt="Hover Image">
+        </div>
+        <div class="red-dot-container">
+            <img id="red2" class="red-dot" src="../static/image/page2/red-dot.png" alt="Red Dot">
+            <img class="hover-image" src="../static/image/page2/hover_image2.png" alt="Hover Image">
+        </div>
+        <div class="red-dot-container">
+            <img id="red3" class="red-dot" src="../static/image/page2/red-dot.png" alt="Red Dot">
+            <img class="hover-image" src="../static/image/page2/hover_image3.png" alt="Hover Image">
+        </div>
+        <div class="red-dot-container">
+            <img id="red4" class="red-dot" src="../static/image/page2/red-dot.png" alt="Red Dot">
+            <img class="hover-image" src="../static/image/page2/hover_image4.png" alt="Hover Image">
+        </div>
+        <div class="red-dot-container">
+            <img id="red5" class="red-dot" src="../static/image/page2/red-dot.png" alt="Red Dot">
+            <img class="hover-image" src="../static/image/page2/hover_image5.png" alt="Hover Image">
+        </div>
+    </div>
+    <div class="section vertical-scrolling fp-auto-height" id="section3">
+        <iframe src="https://www.youtube.com/embed/j4BBDmGFAUs"
+                title="113年視障按摩院改造影片" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <img id='background15' src="../static/image/page2/background9.png" alt="活動詳情">
+    </div>
+    <div class="section vertical-scrolling fp-auto-height" id="section4">
+        <img id='background6' src="../static/image/page4/background6.png" alt="活動詳情">
+    </div>
+    <div class="section vertical-scrolling fp-auto-height" id="section5">
+        <img id='background7' src="../static/image/page4/background7.png" alt="活動詳情">
+    </div>
+</div>
+<div class="section vertical-scrolling fp-auto-height" id="section6">
+    <img id='background8' src="../static/image/page4/background8.png" alt="活動詳情">
+</div>
+
+<script src="../static/js/fullpage.min.js"></script>
+<script>
+    new fullpage('#fullpage', {
+        scrollBar: false,
+        autoScrolling: false,
+        navigation: false,
+        // navigationPosition: 'right',
+        // navigationTooltips: ['首頁', '推拿介紹', '活動詳情', '按摩據點'],
+        showActiveTooltip: false,
+        // scrollOverflow: true,
+        // sectionSelector: '#section6',
+        verticalCentered: false,
+        normalScrollElements: '#section6, #section5',
+    });
+</script>
+<script>
+    document.getElementById('logo1').addEventListener('click', function () {
+        location.reload();
+    });
+    document.getElementById('deer1').addEventListener('click', function () {
+        fullpage_api.moveTo(2);
+    });
+    // document.getElementById('deer2').addEventListener('click', function () {
+    //     fullpage_api.moveTo(3);
+    // });
+    document.getElementById('deer3').addEventListener('click', function () {
+        fullpage_api.moveTo(4);
+    });
+    // document.getElementById('content1').addEventListener('click', function () {
+    //     fullpage_api.moveTo(3);
+    // });
+</script>
+
+<!--滾輪-->
+<script>
+    let bodyWidth = 100; // 初始寬度為 100%
+    let bodyLeft = 0; // 初始 left 為 0%
+    document.addEventListener('keydown', function (event) {
+        if (event.ctrlKey && event.key === '+') {
+            if (bodyWidth < 200) {
+                bodyWidth += 10; // 增加寬度
+                bodyLeft -= 5; // 減少 left，保持居中
+            }
+        } else if (event.ctrlKey && event.key === '-') {
+            if (bodyWidth > 50) {
+                bodyWidth -= 10; // 減少寬度
+                bodyLeft += 5; // 增加 left
+            }
+        }
+        document.body.style.width = bodyWidth + '%';
+        document.body.style.left = bodyLeft + '%';
+    });
+    document.addEventListener('wheel', function (event) {
+        if (event.ctrlKey) {
+            event.preventDefault(); // 防止默認的滾輪縮放行為
+            if (event.deltaY < 0) {
+                if (bodyWidth < 200) {
+                    bodyWidth += 10; // 增加寬度
+                    bodyLeft -= 5; // 減少 left，保持居中
+                }
+            } else {
+                if (bodyWidth > 50) {
+                    bodyWidth -= 10; // 減少寬度
+                    bodyLeft += 5; // 增加 left
+                }
+            }
+            document.body.style.width = bodyWidth + '%';
+            document.body.style.left = bodyLeft + '%';
+        }
+    });
+</script>
+
+
+<script>
+    document.getElementById("deer2").addEventListener("click", function () {
+        // 導航到另一頁，並指定滾動目標
+        window.location.href = "activity.html";
+    });
+    document.getElementById("content2").addEventListener("click", function () {
+        // 導航到另一頁，並指定滾動目標
+        window.location.href = "activity.html";
+    });
+    // 確保頁面加載完成後進行滾動
+    window.addEventListener("load", function () {
+        const hash = window.location.hash;
+        if (hash) {
+            const targetElement = document.querySelector(hash);
+            if (targetElement) {
+                targetElement.scrollIntoView({behavior: "smooth"});
+            }
+        }
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        loop: true, // 讓輪播循環
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000, // 每隔 3 秒自動切換
+            disableOnInteraction: false,
+        },
+    });
+</script>
+</body>
+</html>

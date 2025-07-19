@@ -6,6 +6,12 @@
     <title>作品展示 - 政安科學軟體測試有限公司</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-6191200390333168" crossorigin="anonymous"></script>
+    <!-- 加入 Tailwind Aspect-Ratio plugin -->
+    <script>
+        tailwind.config = {
+            plugins: [tailwindcssAspectRatio]
+        }
+    </script>
 </head>
 <body class="bg-gray-900 text-gray-100">
 
@@ -15,31 +21,71 @@
 <!-- Header -->
 <section class="bg-gray-900 py-16 text-center">
     <h2 class="text-3xl font-bold mb-4">作品展示</h2>
-    <p class="text-gray-300">以下是我們開發的應用程式、網站與自動化測試專案，支援跨平台使用。</p>
+    <p class="text-gray-300">以下是我們開發或驗證的應用程式、網站與自動化測試專案，支援跨平台使用。</p>
 </section>
 
 <!-- 快速導覽按鈕 -->
 <section class="bg-gray-800 py-6 shadow-inner">
     <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
-        <a href="#app-dev" class="px-6 py-2 rounded-full bg-emerald-600 hover:bg-emerald-700 font-semibold shadow">APP 開發</a>
-        <a href="#web-dev" class="px-6 py-2 rounded-full bg-sky-600 hover:bg-sky-700 font-semibold shadow">網頁開發</a>
         <a href="#automation-testing" class="px-6 py-2 rounded-full bg-amber-600 hover:bg-amber-700 font-semibold shadow">自動化測試</a>
+        <a href="#web-dev" class="px-6 py-2 rounded-full bg-sky-600 hover:bg-sky-700 font-semibold shadow">網頁開發</a>
+        <a href="#app-dev" class="px-6 py-2 rounded-full bg-emerald-600 hover:bg-emerald-700 font-semibold shadow">APP 開發</a>
     </div>
 </section>
 
-<!-- 作品分類展示 -->
+<!-- 作品分類展示（自動化測試 → 網頁開發 → APP 開發） -->
 <section class="py-20 bg-gray-800 space-y-24">
+    <!-- 自動化測試 -->
+    <div id="automation-testing" class="max-w-5xl mx-auto px-4 space-y-10 border-y-4 border-amber-600 py-10">
+        <h3 class="text-2xl font-bold text-amber-400 mb-6">自動化測試</h3>
+
+        <!-- CoinWallet -->
+        <div class="bg-gray-900 p-6 rounded-lg shadow text-gray-300 ring-2 ring-amber-700/70">
+            <h4 class="text-xl font-bold mb-2 text-white">CoinWallet</h4>
+            <p class="mb-4">多鏈數位錢包；本公司協助其 Android 與 iOS 端的 E2E 自動化測試。</p>
+            <div class="grid md:grid-cols-2 gap-4 mb-6">
+                <a href="https://play.google.com/store/apps/details?id=com.coinsdo.wallet&hl=zh_TW&pli=1" target="_blank" class="block w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded text-center">📲 Google Play</a>
+                <a href="https://apps.apple.com/us/app/coinsdo-wallet-btc-eth-wallet/id6479635869" target="_blank" class="block w-full bg-gray-600 hover:bg-gray-700 text-white py-3 rounded text-center"> App Store</a>
+            </div>
+            <!-- 直式 YouTube Shorts 影片 -->
+            <div class="aspect-w-9 aspect-h-16">
+                <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/XqSA2jKHsJI" title="CoinWallet 示範影片" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- 測試流程說明 -->
+            <ul class="mt-6 space-y-1 text-sm list-disc list-inside text-gray-300">
+                <li><span class="text-amber-300 font-mono">0:00</span> 測試首次開啟 APP 跳出「詐騙警報」彈跳窗，點選『×』關閉彈窗</li>
+                <li><span class="text-amber-300 font-mono">0:19</span> 首次開啟 APP 展示引導頁面，引導頁可正常翻頁</li>
+                <li><span class="text-amber-300 font-mono">0:25</span> 右上角切換語種，語言切換後顯示正常</li>
+                <li><span class="text-amber-300 font-mono">0:36</span> 「隱私權政策」與「服務條款」可點擊並正確跳轉</li>
+                <li><span class="text-amber-300 font-mono">0:46</span> 建立 PIN 後重新開啟 APP，確認 PIN 可成功登入</li>
+            </ul>
+        </div>
+
+        <!-- 其他案例保留提示 -->
+        <p class="text-gray-400 mt-10">敬請期待更多自動化測試案例展示。</p>
+    </div>
+
+    <!-- 網頁開發 -->
+    <div id="web-dev" class="max-w-5xl mx-auto px-4 space-y-10 border-y-4 border-sky-600 py-10">
+        <h3 class="text-2xl font-bold text-sky-400 mb-6">網頁開發</h3>
+
+        <!-- 視障按摩推廣資訊網 -->
+        <div class="bg-gray-900 p-6 rounded-lg shadow text-gray-300 ring-2 ring-sky-700/70">
+            <h4 class="text-xl font-bold mb-2 text-white">視障按摩推廣資訊網</h4>
+            <p class="mb-4">推廣視障按摩產業，提供服務據點介紹、預約資訊與公益理念的響應式網站。</p>
+            <a href="#" target="_blank" class="block w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded text-center mb-4">🌐 前往網站</a>
+        </div>
+    </div>
+
     <!-- APP 開發 -->
-    <div id="app-dev" class="max-w-5xl mx-auto px-4 space-y-10 border-y-2 border-emerald-600 py-10">
+    <div id="app-dev" class="max-w-5xl mx-auto px-4 space-y-10 border-y-4 border-emerald-600 py-10">
         <h3 class="text-2xl font-bold text-emerald-400 mb-6">APP 開發</h3>
 
         <!-- 科學加速 -->
-        <div class="bg-gray-900 p-6 rounded-lg shadow text-gray-300 ring-1 ring-emerald-700/50">
+        <div class="bg-gray-900 p-6 rounded-lg shadow text-gray-300 ring-2 ring-emerald-700/70">
             <h4 class="text-xl font-bold mb-2 text-white">科學加速</h4>
-            <p class="mb-4">幫助科學計算，促進科學進步</p>
-            <!-- 滿版按鈕 -->
+            <p class="mb-4">幫助科學計算，促進科學進步。</p>
             <a href="https://play.google.com/store/apps/details?id=com.chengan.scienceacceleration" target="_blank" class="block w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded text-center mb-8">📲 Google Play</a>
-            <!-- 截圖 -->
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <img src="image/單位換算-壓力.jpg" alt="單位換算-壓力" class="w-full rounded shadow" />
                 <img src="image/單位換算-壓力（展開單位）.jpg" alt="單位換算-壓力（展開單位）" class="w-full rounded shadow" />
@@ -53,42 +99,11 @@
             </div>
         </div>
     </div>
-
-    <!-- 網頁開發 -->
-    <div id="web-dev" class="max-w-5xl mx-auto px-4 space-y-10 border-y-2 border-sky-600 py-10">
-        <h3 class="text-2xl font-bold text-sky-400 mb-6">網頁開發</h3>
-
-        <!-- 視障按摩推廣資訊網 -->
-        <div class="bg-gray-900 p-6 rounded-lg shadow text-gray-300 ring-1 ring-sky-700/50">
-            <h4 class="text-xl font-bold mb-2 text-white">視障按摩推廣資訊網</h4>
-            <p class="mb-4">推廣視障按摩產業，提供服務據點介紹、預約資訊與公益理念的一頁式網站。</p>
-            <!-- 網站連結 -->
-            <a href="#" target="_blank" class="block w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded text-center mb-4">🌐 前往網站</a>
-        </div>
-    </div>
-
-    <!-- 自動化測試 -->
-    <div id="automation-testing" class="max-w-5xl mx-auto px-4 space-y-10 border-y-2 border-amber-600 py-10">
-        <h3 class="text-2xl font-bold text-amber-400 mb-6">自動化測試</h3>
-
-        <!-- CoinWallet -->
-        <div class="bg-gray-900 p-6 rounded-lg shadow text-gray-300 ring-1 ring-amber-700/50">
-            <h4 class="text-xl font-bold mb-2 text-white">CoinWallet</h4>
-            <p class="mb-4">Android 與 iOS 端的自動化測試。</p>
-            <div class="grid md:grid-cols-2 gap-4">
-                <a href="https://play.google.com/store/apps/details?id=com.coinsdo.wallet&hl=zh_TW&pli=1" target="_blank" class="block w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded text-center">📲 Google Play</a>
-                <a href="https://apps.apple.com/us/app/coinsdo-wallet-btc-eth-wallet/id6479635869" target="_blank" class="block w-full bg-gray-600 hover:bg-gray-700 text-white py-3 rounded text-center"> App Store</a>
-            </div>
-        </div>
-
-    </div>
 </section>
 
 <!-- Footer -->
 <div id="footer-placeholder"></div>
 
-<!-- 載入 navbar 和 footer -->
 <script type="module" src="navbar-loader.js"></script>
-
 </body>
 </html>

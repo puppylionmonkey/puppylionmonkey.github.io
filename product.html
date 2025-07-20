@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>作品展示 - 政安科學軟體測試有限公司</title>
-    <!-- 保留 Tailwind CDN，之後如需改用自訂 CSS 可再調整 -->
+    <!-- 保留 Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-900 text-gray-100">
@@ -20,7 +20,6 @@
 <!-- 快速導覽按鈕 -->
 <section class="bg-gray-800 py-6 shadow-inner">
     <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
-        <!-- href 改為 # 並在 JS 中 preventDefault，防止頁面捲動 -->
         <a href="#" data-target="automation-testing" class="category-btn px-6 py-2 rounded-full bg-amber-600 hover:bg-amber-700 font-semibold shadow">自動化測試</a>
         <a href="#" data-target="web-dev" class="category-btn px-6 py-2 rounded-full bg-sky-600 hover:bg-sky-700 font-semibold shadow">網頁開發</a>
         <a href="#" data-target="app-dev" class="category-btn px-6 py-2 rounded-full bg-emerald-600 hover:bg-emerald-700 font-semibold shadow">APP 開發</a>
@@ -36,7 +35,7 @@
         <!-- CoinWallet -->
         <div class="bg-gray-900 p-6 rounded-lg shadow text-gray-300 ring-2 ring-amber-700/70 space-y-8">
             <h4 class="text-xl font-bold mb-2 text-white">CoinWallet</h4>
-            <p class="mb-4">Coinwallet Android 與 iOS 自動化測試。</p>
+            <p class="mb-4">CoinWallet Android 與 iOS 自動化測試。</p>
             <div class="grid md:grid-cols-2 gap-4 mb-4">
                 <a href="https://play.google.com/store/apps/details?id=com.coinsdo.wallet" target="_blank" class="block w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded text-center">📲 Google Play</a>
                 <a href="https://apps.apple.com/us/app/coinsdo-wallet-btc-eth-wallet/id6479635869" target="_blank" class="block w-full bg-gray-600 hover:bg-gray-700 text-white py-3 rounded text-center"> App Store</a>
@@ -44,9 +43,12 @@
 
             <!-- 測試案例列表 -->
             <div class="space-y-12">
+
                 <!-- 案例 1 -->
-                <div class="flex flex-col md:flex-row md:items-center md:gap-6 ring-1 ring-amber-600/70 rounded-lg p-4">
-                    <ul class="list-disc list-inside space-y-2 text-sm md:w-1/2 order-2 md:order-1">
+                <div class="relative flex flex-col md:flex-row md:items-center md:gap-6 ring-1 ring-amber-600/70 rounded-lg p-4">
+                    <!-- 區塊標題 -->
+                    <h5 class="absolute top-2 left-4 text-sm md:text-base font-semibold text-white bg-gray-800 bg-opacity-80 px-2 py-1 rounded">測試核心功能</h5>
+                    <ul class="list-disc list-inside space-y-2 text-sm md:w-1/2 order-2 md:order-1 mt-10 md:mt-0">
                         <li>測試建立助記詞錢包</li>
                         <li>測試開啟測試網路</li>
                         <li>測試導入助記詞錢包（測試網路）</li>
@@ -56,27 +58,30 @@
                     </ul>
                     <div class="md:w-1/2 order-1 md:order-2 flex justify-center">
                         <div class="w-full" style="aspect-ratio:9/16;max-width:240px;margin:auto">
-                            <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/7f_eFM8U3RQ" title="CoinWallet 示範影片" frameborder="0" allowfullscreen></iframe>
+                            <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/7f_eFM8U3RQ" title="測試創建錢包自向流程" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
-                <!-- 案例 1 -->
-                <div class="flex flex-col md:flex-row md:items-center md:gap-6 ring-1 ring-amber-600/70 rounded-lg p-4">
-                    <ul class="list-disc list-inside space-y-2 text-sm md:w-1/2 order-2 md:order-1">
+
+                <!-- 案例 2 -->
+                <div class="relative flex flex-col md:flex-row md:items-center md:gap-6 ring-1 ring-amber-600/70 rounded-lg p-4">
+                    <h5 class="absolute top-2 left-4 text-sm md:text-base font-semibold text-white bg-gray-800 bg-opacity-80 px-2 py-1 rounded">測試錢包CRUD</h5>
+                    <ul class="list-disc list-inside space-y-2 text-sm md:w-1/2 order-2 md:order-1 mt-10 md:mt-0">
                         <li>測試新增錢包</li>
                         <li>測試修改錢包名稱</li>
                         <li>測試刪除錢包</li>
                     </ul>
                     <div class="md:w-1/2 order-1 md:order-2 flex justify-center">
                         <div class="w-full" style="aspect-ratio:9/16;max-width:240px;margin:auto">
-                            <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/jTW48dXJSYQ" title="CoinWallet 示範影片" frameborder="0" allowfullscreen></iframe>
+                            <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/jTW48dXJSYQ" title="錢包增刪改流程測試" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
 
-                <!-- 案例 2 -->
-                <div class="flex flex-col md:flex-row md:items-center md:gap-6 ring-1 ring-amber-600/70 rounded-lg p-4">
-                    <ul class="list-disc list-inside space-y-2 text-sm md:w-1/2 order-2 md:order-1">
+                <!-- 案例 3 -->
+                <div class="relative flex flex-col md:flex-row md:items-center md:gap-6 ring-1 ring-amber-600/70 rounded-lg p-4">
+                    <h5 class="absolute top-2 left-4 text-sm md:text-base font-semibold text-white bg-gray-800 bg-opacity-80 px-2 py-1 rounded">測試創建錢包負向流程</h5>
+                    <ul class="list-disc list-inside space-y-2 text-sm md:w-1/2 order-2 md:order-1 mt-10 md:mt-0">
                         <li>創建錢包</li>
                         <li>測試錢包名稱必須介於 4–15 的字符</li>
                         <li>測試助記詞顯示的時候，禁止截圖</li>
@@ -85,27 +90,30 @@
                     </ul>
                     <div class="md:w-1/2 order-1 md:order-2 flex justify-center">
                         <div class="w-full" style="aspect-ratio:9/16;max-width:240px;margin:auto">
-                            <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/UCRALmAgW_E" title="CoinWallet 助記詞錢包示範" frameborder="0" allowfullscreen></iframe>
+                            <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/UCRALmAgW_E" title="測試建立助記詞錢包" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
-                <!-- 案例 3 -->
-                <div class="flex flex-col md:flex-row md:items-center md:gap-6 ring-1 ring-amber-600/70 rounded-lg p-4">
-                    <ul class="list-disc list-inside space-y-2 text-sm md:w-1/2 order-2 md:order-1">
+
+                <!-- 案例 4 -->
+                <div class="relative flex flex-col md:flex-row md:items-center md:gap-6 ring-1 ring-amber-600/70 rounded-lg p-4">
+                    <h5 class="absolute top-2 left-4 text-sm md:text-base font-semibold text-white bg-gray-800 bg-opacity-80 px-2 py-1 rounded">測試創建MPC錢包(多台手機)</h5>
+                    <ul class="list-disc list-inside space-y-2 text-sm md:w-1/2 order-2 md:order-1 mt-10 md:mt-0">
                         <li>手機 1 創建 MPC 錢包</li>
                         <li>手機 2 使用邀請碼加入 MPC 錢包</li>
                         <li>確認兩個錢包資產都正確</li>
                     </ul>
                     <div class="md:w-1/2 order-1 md:order-2 flex justify-center">
                         <div class="w-full" style="aspect-ratio:9/16;max-width:240px;margin:auto">
-                            <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/SohpxUslCZk" title="CoinWallet 助記詞錢包示範" frameborder="0" allowfullscreen></iframe>
+                            <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/SohpxUslCZk" title="MPC 錢包邀請加入測試" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
 
-                <!-- 案例 4 -->
-                <div class="flex flex-col md:flex-row md:items-center md:gap-6 ring-1 ring-amber-600/70 rounded-lg p-4">
-                    <ul class="list-disc list-inside space-y-2 text-sm md:w-1/2 order-2 md:order-1">
+                <!-- 案例 5 -->
+                <div class="relative flex flex-col md:flex-row md:items-center md:gap-6 ring-1 ring-amber-600/70 rounded-lg p-4">
+                    <h5 class="absolute top-2 left-4 text-sm md:text-base font-semibold text-white bg-gray-800 bg-opacity-80 px-2 py-1 rounded">測試指紋解鎖</h5>
+                    <ul class="list-disc list-inside space-y-2 text-sm md:w-1/2 order-2 md:order-1 mt-10 md:mt-0">
                         <li>設定指紋認證</li>
                         <li>創建錢包</li>
                         <li>開啟測試網路</li>
@@ -114,43 +122,48 @@
                     </ul>
                     <div class="md:w-1/2 order-1 md:order-2 flex justify-center">
                         <div class="w-full" style="aspect-ratio:9/16;max-width:240px;margin:auto">
-                            <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/XMuUpwRYQss" title="CoinWallet 助記詞錢包示範" frameborder="0" allowfullscreen></iframe>
+                            <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/XMuUpwRYQss" title="指紋認證與轉賬測試" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col md:flex-row md:items-center md:gap-6 ring-1 ring-amber-600/70 rounded-lg p-4">
-                    <ul class="list-disc list-inside space-y-2 text-sm md:w-1/2 order-2 md:order-1">
-                        <li>程式截圖 QRCODE，回傳 6 位數 Google 碼</li>
+
+                <!-- 案例 6 -->
+                <div class="relative flex flex-col md:flex-row md:items-center md:gap-6 ring-1 ring-amber-600/70 rounded-lg p-4">
+                    <h5 class="absolute top-2 left-4 text-sm md:text-base font-semibold text-white bg-gray-800 bg-opacity-80 px-2 py-1 rounded">測試使用google 驗證碼設置二次驗證</h5>
+                    <ul class="list-disc list-inside space-y-2 text-sm md:w-1/2 order-2 md:order-1 mt-10 md:mt-0">
+                        <li>創建錢包</li>
+                        <li>設置Google碼二次驗證(程式截圖QRCODE，回傳6位數Google碼)</li>
+                        <li>確認刪除錢包需要Google碼二次驗證</li>
                     </ul>
                     <div class="md:w-1/2 order-1 md:order-2 flex justify-center">
                         <div class="w-full" style="aspect-ratio:9/16;max-width:240px;margin:auto">
-                            <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/nWV0xJSArkI" title="CoinWallet 助記詞錢包示範" frameborder="0" allowfullscreen></iframe>
+                            <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/nWV0xJSArkI" title="截圖 QRCODE 取得 Google 驗證碼" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col md:flex-row md:items-center md:gap-6 ring-1 ring-amber-600/70 rounded-lg p-4">
-                    <ul class="list-disc list-inside space-y-2 text-sm md:w-1/2 order-2 md:order-1">
-                        <li>確認至少需要5個連接點，才能設置成功</li>
-                        </li>
+
+                <!-- 案例 7 -->
+                <div class="relative flex flex-col md:flex-row md:items-center md:gap-6 ring-1 ring-amber-600/70 rounded-lg p-4">
+                    <h5 class="absolute top-2 left-4 text-sm md:text-base font-semibold text-white bg-gray-800 bg-opacity-80 px-2 py-1 rounded">測試使用圖案驗證設置二次驗證</h5>
+                    <ul class="list-disc list-inside space-y-2 text-sm md:w-1/2 order-2 md:order-1 mt-10 md:mt-0">
+                        <li>創建錢包</li>
+                        <li>設置圖案二次驗證(確認至少需要 5 個連接點，才能設置成功)</li>
+                        <li>確認刪除錢包需要Google碼二次驗證</li>
                     </ul>
                     <div class="md:w-1/2 order-1 md:order-2 flex justify-center">
                         <div class="w-full" style="aspect-ratio:9/16;max-width:240px;margin:auto">
-                            <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/M0GO0sjHj3o" title="CoinWallet 助記詞錢包示範" frameborder="0" allowfullscreen></iframe>
+                            <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/M0GO0sjHj3o" title="MPC 錢包安全連接點測試" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
 
-
-            </div>
-        </div>
-
-    </div>
+            </div> <!-- End of space-y-12 -->
+        </div> <!-- End of CoinWallet -->
+    </div> <!-- End of automation-testing -->
 
     <!-- 網頁開發 -->
     <div id="web-dev" class="hidden max-w-5xl mx-auto px-4 space-y-10 py-10">
         <h3 class="text-3xl font-bold text-sky-400 mb-4">網頁開發</h3>
-
-        <!-- 視障按摩推廣資訊網 -->
         <div class="bg-gray-900 p-6 rounded-lg shadow text-gray-300 ring-2 ring-sky-700/70">
             <h4 class="text-xl font-bold mb-2 text-white">視障按摩推廣資訊網</h4>
             <p class="mb-4">推廣視障按摩產業，提供服務據點介紹、預約資訊與公益理念的響應式網站。</p>
@@ -161,8 +174,6 @@
     <!-- APP 開發 -->
     <div id="app-dev" class="hidden max-w-5xl mx-auto px-4 space-y-10 py-10">
         <h3 class="text-3xl font-bold text-emerald-400 mb-4">APP 開發</h3>
-
-        <!-- 科學加速 -->
         <div class="bg-gray-900 p-6 rounded-lg shadow text-gray-300 ring-2 ring-emerald-700/70">
             <h4 class="text-xl font-bold mb-2 text-white">科學加速</h4>
             <p class="mb-4">幫助科學計算，促進科學進步。</p>
@@ -189,15 +200,11 @@
 <script>
     document.querySelectorAll(".category-btn").forEach(btn => {
         btn.addEventListener("click", (e) => {
-            // 阻止 <a> 產生的預設跳轉與捲動
             e.preventDefault();
-
             const targetId = btn.dataset.target;
-            // 隱藏所有分類
             document.querySelectorAll("#automation-testing, #web-dev, #app-dev").forEach(sec => {
                 sec.classList.add("hidden");
             });
-            // 顯示目標分類
             document.getElementById(targetId).classList.remove("hidden");
         });
     });
